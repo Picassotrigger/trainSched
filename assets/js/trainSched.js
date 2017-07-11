@@ -48,6 +48,7 @@ function nextTrainMinutes(startTime, frequency) {
 
 //============================  MAIN  ============================//
 
+
 //-------------  Open Input Form -------------//
 $("#add-train").on("click", function() {
   $("#add-train-form").toggle(1000);
@@ -60,6 +61,7 @@ $("#close-train").on("click", function() {
   $("#add-train").toggle();
   $("#close-train").toggle();
 });
+
 
 
 //-------------  Capture Button Click / New Entry -------------//
@@ -96,7 +98,7 @@ $("#submit-train").on("click", function() {
 
 
 
-//-------------  Capture Button Click / New Entry -------------//
+//-------------  Update Screen -------------//
 database.ref().on("child_added", function(childSnapshot) {
 
   var temp= [];
@@ -105,11 +107,7 @@ database.ref().on("child_added", function(childSnapshot) {
   temp.push(childSnapshot.val().startTime);
   temp.push(childSnapshot.val().frequency);
 
-
   data.push(temp);
-
-  console.log(currentTime);
-
 
   $("#schedOutput").append(
       "<tr><td>" + childSnapshot.val().name
