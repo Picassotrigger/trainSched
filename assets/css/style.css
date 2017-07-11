@@ -1,0 +1,61 @@
+html {
+  /*background-color: pink;*/
+
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+h1 {
+  font-size: 2.5em;
+  margin: 54px 0 0 30px;
+}
+/*th {
+  color: rgb(45, 151, 217);
+
+}*/
+.table thead th {
+  color: rgb(45, 151, 217);
+}
+.navbar {
+  height: 110px;
+  border-bottom: 2px solid grey;
+  background-color: transparent;
+}
+.navbar-item img {
+    max-height: 4rem;
+    margin: 60px 0 0 30px;
+}
+.container {
+  width: auto;
+  margin: 10px auto;
+}
+
+#submit-train {
+  margin: 0 0 0 0;
+  display: block;
+  width: 100%;
+  background-color: rgb(45, 151, 217);
+  color: white;
+  border: none;
+}
+#add-train-form {
+  display: none;
+  border-bottom: 2px solid grey;
+  padding: 20px 0 60px 0;
+  margin-bottom: 40px;
+}
+#add-train, #close-train {
+  margin: 4px 40px 0 0;
+  border: 1px solid rgb(45, 151, 217);
+  color: rgb(45, 151, 217);
+}
+.fa-plus-circle {
+  color: rgb(45, 151, 217);
+}
+#close-train {
+  display: none;
+  height: 36px;
+}
+#output-table {
+  margin: 20px 0 0 0;
+}

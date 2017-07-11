@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Train Schedule</title>
+  <meta name="description" content="DESCRIPTION">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+</head>
+
+<body>
+
+  <div = class="container">
+
+    <nav class="navbar"><!--=========================   BEGIN NAVBAR =========================-->
+
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="assets/img/train.png"/>
+        </a>
+        <a class="navbar-item">
+          <h1>TRAIN SCHEDULE</h1>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+
+            <p class="control">
+              <a id="add-train" class="button">
+                <span class="icon">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </span>
+                <span>Add a Train</span>
+              </a>
+            </p>
+
+            <p class="control">
+              <a id="close-train" class="button">
+                <span class="icon">
+                  <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                </span>
+                <span>Close Panel</span>
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </nav><!--=========================   END NAVBAR  =========================-->
+
+
+
+
+    <div id="add-train-form"><!--=========================   BEGIN INPUT FORM  =========================-->
+
+      <div class="columns">
+        <div class="column is-half field" align="center">
+          <label>TRAIN'S NAME</label>
+          <p class="control">
+            <input id="name" class="input" type="text" placeholder="What is the name of the train?" />
+          </p>
+        </div>
+
+        <div class="column is-half field" align="center">
+          <label>TRAIN'S DESTINATION</label>
+          <p class="control">
+            <input id="destination" class="input" type="text" placeholder="Where is it going?" />
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-half field" align="center">
+          <label>TIME OF FIRST TRAIN</label>
+          <p class="control">
+            <input id="start-time" class="input" type="text" placeholder="What time does the first train run? (HH:MM)" />
+          </p>
+        </div>
+
+        <div class="column is-half field" align="center">
+          <label>FREQUENCY OF TRAIN</label>
+          <p class="control">
+            <input id="frequency" class="input" type="text" placeholder="How often does it run? (minutes)" />
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column field is-grouped" align="center">
+          <p class="control">
+            <button id="submit-train" class="button">SUBMIT</button>
+          </p>
+        </div>
+      </div>
+
+    </div><!--=========================   END INPUT FORM  =========================-->
+
+
+    <div id="output-table"><!--=========================   BEGIN OUTPUT TABLE  =========================-->
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody id="schedOutput">
+
+        </tbody>
+      </table>
+    </div><!--=========================   END OUTPUT TABLE  =========================-->
+
+
+  </div> <!--=========================   END OF CONTAINER  =========================-->
+
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/moment.js"></script>
+  <script src="assets/js/trainSched.js"></script>
+</body>
+
+</html>
